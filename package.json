@@ -1,0 +1,45 @@
+{
+  "name": "tauri-plugin-sunmi-api",
+  "version": "0.0.0",
+  "author": "You",
+  "description": "",
+  "type": "module",
+  "types": "./dist-js/index.d.ts",
+  "import": "./dist-js/index.js",
+  "require": "./dist-js/index.cjs",
+  "exports": {
+    ".": {
+      "types": "./dist-js/index.d.ts",
+      "import": "./dist-js/index.js",
+      "require": "./dist-js/index.cjs"
+    },
+    "./models/column_maker": {
+      "types": "./dist-js/models/column_maker.d.ts",
+      "import": "./dist-js/models/column_maker.d.ts",
+      "require": "./dist-js/models/column_maker.d.ts"
+    },
+    "./models": {
+      "types": "./dist-js/models/index.d.ts",
+      "default": "./dist-js/models/index.d.ts"
+    }
+  },
+  "files": [
+    "dist-js",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "yarn build",
+    "pretest": "yarn build"
+  },
+  "dependencies": {
+    "@tauri-apps/api": ">=2.0.0-beta.6"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@tauri-apps/cli": "2.0.0-rc.3",
+    "rollup": "^4.9.6",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
