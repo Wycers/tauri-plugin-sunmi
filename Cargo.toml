@@ -9,10 +9,10 @@ exclude = ["/examples", "/webview-dist", "/webview-src", "/node_modules"]
 links = "tauri-plugin-sunmi"
 
 [dependencies]
-tauri = { version = "=2.0.3" }
+tauri = { version = "=2.0.1" }
 serde = "1.0"
 thiserror = "1.0"
 
 [build-dependencies]
-tauri-plugin = { version = "2.0.3", features = ["build"] }
-tauri-build = "=2.0.0"
+tauri-plugin = { version = "2.0.1", features = ["build"] }
+tauri-build = "=2.0.1"
